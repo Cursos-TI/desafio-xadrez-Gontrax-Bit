@@ -5,7 +5,7 @@
 
 int main() {
 
-int bispo = 0, rainha = 0, torre;
+int bispo = 0, rainha = 0, torre, cavalo = 1;
 int peça;
 int casas;
 
@@ -16,6 +16,7 @@ printf("Selecione a peça que deseja mover\n");
 printf("1 - TORRE\n");
 printf("2 - BISPO\n");
 printf("3 - RAINHA\n");
+printf("4 - CAVALO\n");
 scanf("%d", &peça);
 
 switch (peça)
@@ -269,16 +270,158 @@ int movimentoRAINHA;
         break;
 
 default:
-printf("Opção invalida, selecione uma das 3 anteriores\n");
+printf("Opção invalida, selecione uma das 8 anteriores\n");
     break;
 
 
      }
 
-break;
+break;//break case3
+
+case 4:
+int movimentoCAVALO;
+
+    printf("Selecione a direção\n");
+    printf("1 - CIMA DIREITA\n");
+    printf("2 - CIMA ESQUERDA\n");
+    printf("3 - BAIXO DIREITA\n");
+    printf("4 - BAIXO ESQUERDA\n"); 
+    printf("5 - DIREITA CIMA\n");
+    printf("6 - DIREITA BAIXO\n");
+    printf("7 - ESQUERDA CIMA\n");
+    printf("8 - ESQUERDA BAIXO\n"); 
+    scanf("%d", &movimentoCAVALO);
+
+    switch (movimentoCAVALO)
+    
+    {
+    case 1:
+        
+        while (cavalo--)//decrementa para o segundo movimento ser apenas uma casa
+        {
+            for (int i = 0; i < 2; i++)//variavel dentro do loop, loop de duas etapas 
+            {
+                printf("Cavalo se movimenta para CIMA\n"); // imprime CIMA duas vezes, loop interno
+            }
+            printf("Cavalo se movimenta para DIREITA\n");//segundo movimento, impresso uma vez, loop externo
+        }
+        
+        break;
+    
+    
+    case 2:
+        
+        while (cavalo--)
+        {
+            for (int i = 0; i < 2; i++) 
+            {
+                printf("Cavalo se movimenta para CIMA\n"); 
+            }
+            printf("Cavalo se movimenta para ESQUERDA\n");
+        }
+
+        break;
+
+
+
+    case 3:
+        
+        while (cavalo--)
+        {
+            for (int i = 0; i < 2; i++) 
+            {
+                printf("Cavalo se movimenta para BAIXO\n"); 
+            }
+            printf("Cavalo se movimenta para DIREITA\n");
+        }
+        
+        break;
+
+
+
+    case 4:
+        
+        while (cavalo--)
+        {
+            for (int i = 0; i < 2; i++) 
+            {
+                printf("Cavalo se movimenta para BAIXO\n"); 
+            }
+            printf("Cavalo se movimenta para ESQUERDA\n");
+        }
+        
+        break;
+        
+        
+
+    case 5:
+        
+        while (cavalo--)
+        {
+            for (int i = 0; i < 2; i++) 
+            {
+                printf("Cavalo se movimenta para DIREITA\n"); 
+            }
+            printf("Cavalo se movimenta para CIMA\n");
+        }
+        
+        break;
+
+
+
+    case 6:
+        
+        while (cavalo--)
+        {
+            for (int i = 0; i < 2; i++) 
+            {
+                printf("Cavalo se movimenta para DIREITA\n"); 
+            }
+            printf("Cavalo se movimenta para BAIXO\n");
+        }
+       
+        break;
+
+
+
+    case 7:
+        
+        while (cavalo--)
+        {
+            for (int i = 0; i < 2; i++) 
+            {
+                printf("Cavalo se movimenta para ESQUERDA\n"); 
+            }
+            printf("Cavalo se movimenta para CIMA\n");
+        }
+       
+        break;
+
+
+
+    case 8:
+        
+        while (cavalo--)
+        {
+            for (int i = 0; i < 2; i++) 
+            {
+                printf("Cavalo se movimenta para ESQUERDA\n"); 
+            }
+            printf("Cavalo se movimenta para BAIXO\n");
+        }
+       
+        break;
+    
+    default:
+    printf("Opção invalida, selecione uma das 8 anteriores\n");
+        break;
+    }
+
+
+break;//break case 4
     
 default:
-printf("Opção invalida, selecione uma das 3 anteriores\n");
+printf("Opção invalida, selecione uma das 4 anteriores\n");
     break;
 }
 
